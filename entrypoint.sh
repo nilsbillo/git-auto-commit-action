@@ -178,6 +178,7 @@ _push_to_github() {
     else
 	 COUNTER=0
 	 set +e
+	 git config pull.rebase true
 
 	 while [ $COUNTER -lt 120 ]; do
             echo  "Push commit to remote branch $INPUT_BRANCH";
@@ -187,6 +188,7 @@ _push_to_github() {
 	    fi
 	    echo "Failed to push, rebasing and test again in 2s"
 	    ((COUNTER=COUNTER+1))
+	    git fetch
 	    git pull --no-edit
 	    sleep 2
         done
