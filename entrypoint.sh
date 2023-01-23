@@ -180,15 +180,15 @@ _push_to_github() {
 	 set +e
 
 	 while [ $COUNTER -lt 120 ]; do
-        _log "debug" "Push commit to remote branch $INPUT_BRANCH";
-	$(git push --set-upstream origin "HEAD:$INPUT_BRANCH" --follow-tags --atomic ${INPUT_PUSH_OPTIONS:+"${INPUT_PUSH_OPTIONS_ARRAY[@]}"};)
-	if [ $? == 0 ]; then
-		break;
-	fi
-	echo "Failed to push, rebasing and test again in 2s"
-	((COUNTER=COUNTER+1))
-	git pull --rebase
-	sleep 2
+            echo  "Push commit to remote branch $INPUT_BRANCH";
+	    $(git push --set-upstream origin "HEAD:${INPUT_BRANCH}" --follow-tags --atomic ${INPUT_PUSH_OPTIONS:+"${INPUT_PUSH_OPTIONS_ARRAY[@]}"};)
+	    if [ $? == 0 ]; then
+	    	break;
+	    fi
+	    echo "Failed to push, rebasing and test again in 2s"
+	    ((COUNTER=COUNTER+1))
+	    git pull --rebase
+	    sleep 2
         done
 
 	set -eu
