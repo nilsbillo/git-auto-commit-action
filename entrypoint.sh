@@ -187,7 +187,7 @@ _push_to_github() {
 	    fi
 	    echo "Failed to push, rebasing and test again in 2s"
 	    ((COUNTER=COUNTER+1))
-	    git pull
+	    git pull --no-edit
 	    sleep 2
         done
 
