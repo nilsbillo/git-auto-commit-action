@@ -10,7 +10,7 @@ bats-support@ztombol/bats-support:
   version "0.3.0"
   resolved "https://codeload.github.com/ztombol/bats-support/tar.gz/004e707638eedd62e0481e8cdc9223ad471f12ee"
 
-bats@^1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/bats/-/bats-1.8.2.tgz#bdbaa7690a18f04291b35144a8ce5435cffb8dc5"
-  integrity sha512-KLUIaPYuIMjqui8MbZmK84+CiwhjFVFAhFy5PXP0prLbkovc5faVzc+Qaowbz76F97zP573JrF31ODFAH7vzhg==
+bats@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/bats/-/bats-1.10.0.tgz#d22cb6e2d88fd39302167da237d710406d1587ce"
+  integrity sha512-yOQrC7npuCrN+Ic3TyjTjJlzHa0qlK3oEO6VAYPWwFeutx/GmpljIyB6uNSl/UTASyc2w4FgVuA/QMMf9OdsCw==
